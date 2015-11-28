@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dwk-38-Njd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXJ-hI-lkF">
+                                <rect key="frame" x="0.0" y="178" width="600" height="179"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.19434745947462165" green="0.22506846336083999" blue="0.31366356382978722" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Quick Actions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mm1-wJ-vpx" kind="show" id="See-Re-GzI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1f-W6-5YV">
+                                <rect key="frame" x="0.0" y="357.5" width="600" height="178.5"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.141183851" green="0.1635011462" blue="0.2278611203" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Pressure Sensitivity">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eEk-7c-SXl" kind="show" id="q60-0z-mbs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1go-dX-CX3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="178.5"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Peek and Pop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ehe-Yy-FTQ" kind="show" id="gSh-ac-ueh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m1f-W6-5YV" secondAttribute="bottom" id="03M-o7-5vs"/>
+                            <constraint firstItem="ZXJ-hI-lkF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KmB-wq-NYf"/>
+                            <constraint firstAttribute="trailing" secondItem="ZXJ-hI-lkF" secondAttribute="trailing" id="Ksl-SN-0yE"/>
+                            <constraint firstItem="1go-dX-CX3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PZI-LR-rhY"/>
+                            <constraint firstItem="m1f-W6-5YV" firstAttribute="top" secondItem="ZXJ-hI-lkF" secondAttribute="bottom" id="WQY-73-Yib"/>
+                            <constraint firstItem="1go-dX-CX3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cAw-a2-ZL4"/>
+                            <constraint firstAttribute="trailing" secondItem="m1f-W6-5YV" secondAttribute="trailing" id="eYd-Bl-wwP"/>
+                            <constraint firstAttribute="trailing" secondItem="1go-dX-CX3" secondAttribute="trailing" id="j6W-fh-Yh6"/>
+                            <constraint firstItem="m1f-W6-5YV" firstAttribute="height" secondItem="1go-dX-CX3" secondAttribute="height" id="jXn-5G-iyx"/>
+                            <constraint firstItem="ZXJ-hI-lkF" firstAttribute="top" secondItem="1go-dX-CX3" secondAttribute="bottom" id="jta-bU-oT2"/>
+                            <constraint firstItem="m1f-W6-5YV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ncg-PQ-HhB"/>
+                            <constraint firstItem="ZXJ-hI-lkF" firstAttribute="height" secondItem="1go-dX-CX3" secondAttribute="height" id="nqF-Kg-gFT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Gt-F8-PC6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="447"/>
+        </scene>
+        <!--Peek Pop View Controller-->
+        <scene sceneID="GMH-fr-vo1">
+            <objects>
+                <viewController id="ehe-Yy-FTQ" customClass="PeekPopViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cyI-fY-eDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="saY-5X-TKI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWd-hc-r5e">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="trI-vq-37X">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QWV-gC-YgA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ehe-Yy-FTQ" id="5i0-h5-GKE"/>
+                                    <outlet property="delegate" destination="ehe-Yy-FTQ" id="RWc-tN-KVW"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="trI-vq-37X" secondAttribute="trailing" id="CIQ-7p-Mlh"/>
+                            <constraint firstItem="trI-vq-37X" firstAttribute="top" secondItem="cyI-fY-eDl" secondAttribute="bottom" id="JAP-Yg-KCk"/>
+                            <constraint firstItem="saY-5X-TKI" firstAttribute="top" secondItem="trI-vq-37X" secondAttribute="bottom" id="qLt-hg-ngC"/>
+                            <constraint firstItem="trI-vq-37X" firstAttribute="leading" secondItem="eWd-hc-r5e" secondAttribute="leading" id="zg5-xl-nbe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="trI-vq-37X" id="5vd-yI-Q0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhD-H7-jFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="-205"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ABn-ah-UDr">
+            <objects>
+                <viewController id="mm1-wJ-vpx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="765-W2-zw7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QWs-zq-s09"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nnG-EU-q18">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.19434745950000001" green="0.2250684634" blue="0.31366356379999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YN4-25-y9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="447"/>
+        </scene>
+        <!--Pressure Sensitivity View Controller-->
+        <scene sceneID="nd0-IA-cAR">
+            <objects>
+                <viewController id="eEk-7c-SXl" customClass="PressureSensitivityViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="whF-kI-vk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bno-fb-APL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kT0-tU-Y7B">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-O4-yd5">
+                                <rect key="frame" x="250" y="269" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kaT-47-Lg3"/>
+                                    <constraint firstAttribute="width" constant="100" id="vFs-UV-Z8W"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-kV-6qP">
+                                <rect key="frame" x="270" y="306" width="59.5" height="24.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.38986110351057607" green="0.45355521492854861" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G47-aZ-2xv">
+                                <rect key="frame" x="257" y="75" width="86.5" height="52"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="G47-aZ-2xv" firstAttribute="top" secondItem="whF-kI-vk0" secondAttribute="bottom" constant="75" id="6pB-i8-Qhb"/>
+                            <constraint firstItem="G47-aZ-2xv" firstAttribute="centerX" secondItem="kT0-tU-Y7B" secondAttribute="centerX" id="A7z-AL-i6d"/>
+                            <constraint firstItem="qlq-kV-6qP" firstAttribute="centerY" secondItem="kT0-tU-Y7B" secondAttribute="centerY" constant="50.25" id="AbK-VL-I7p"/>
+                            <constraint firstItem="qlq-kV-6qP" firstAttribute="centerY" secondItem="dYb-O4-yd5" secondAttribute="centerY" id="JTr-lk-wXR"/>
+                            <constraint firstItem="qlq-kV-6qP" firstAttribute="centerX" secondItem="kT0-tU-Y7B" secondAttribute="centerX" id="PGe-c6-Jct"/>
+                            <constraint firstItem="qlq-kV-6qP" firstAttribute="centerX" secondItem="dYb-O4-yd5" secondAttribute="centerX" id="gsA-Kw-wy3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forceLabel" destination="G47-aZ-2xv" id="iKe-jw-Ck4"/>
+                        <outlet property="roundView" destination="dYb-O4-yd5" id="0yc-h6-y77"/>
+                        <outlet property="touchMeLabel" destination="qlq-kV-6qP" id="nTE-Tl-ohU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szz-cu-GSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="1183"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZHi-7u-jIZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dwk-38-Njd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" translucent="NO" id="3ok-fG-2cW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1ud-oK-OMo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KD1-95-UjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="447"/>
+        </scene>
+    </scenes>
+</document>

@@ -19,7 +19,8 @@ class PressureSensitivityViewController: UIViewController
     
     //MARK: - ViewController LifeCyle
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         self.setupRoundView()
@@ -41,19 +42,22 @@ class PressureSensitivityViewController: UIViewController
         self.handleTouch(touches)
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
         self.handleTouch(touches)
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
         self.handleNoTouch()
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?)
+    {
         self.handleNoTouch()
     }
 
-    //MARK: - Privates Methods
+    //MARK: - Private Methods
     
     private func handleTouch(touches: Set<UITouch>)
     {
@@ -75,7 +79,6 @@ class PressureSensitivityViewController: UIViewController
     
     private func displayMaximumForce()
     {
-
         let touch = UITouch()
         self.forceLabel?.text = "Max = \(String(format: "%.2f", touch.maximumPossibleForce))"
     }

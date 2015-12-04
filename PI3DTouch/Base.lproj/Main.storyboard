@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -93,8 +94,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QWV-gC-YgA">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="QWV-gC-YgA">
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -122,6 +123,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhD-H7-jFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2686" y="-205"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="rfa-FM-vsy">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="yfy-wO-X4c" customClass="ImageViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XkA-dI-OC4"/>
+                        <viewControllerLayoutGuide type="bottom" id="XrX-S5-fYU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="81E-i6-Noh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="176-AQ-agH">
+                                <rect key="frame" x="5" y="10" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="D5A-br-No3"/>
+                                    <constraint firstAttribute="height" constant="50" id="mKe-uf-HIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backTapped:" destination="yfy-wO-X4c" eventType="touchUpInside" id="Mk9-u4-7p3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n4-VA-CKt">
+                                <rect key="frame" x="275" y="500" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3u6-T5-jii"/>
+                                    <constraint firstAttribute="width" constant="50" id="L4a-ak-YBP"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="heart">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="heart_liked">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="heart_liked"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="yfy-wO-X4c" eventType="touchUpInside" id="sC9-8u-srN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ezs-Le-EHZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ezs-Le-EHZ" secondAttribute="height" multiplier="1:1" id="YIG-AW-frh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ezs-Le-EHZ" firstAttribute="leading" secondItem="81E-i6-Noh" secondAttribute="leading" id="CKQ-I3-MPJ"/>
+                            <constraint firstItem="XrX-S5-fYU" firstAttribute="top" secondItem="1n4-VA-CKt" secondAttribute="bottom" constant="50" id="DRf-GQ-x2l"/>
+                            <constraint firstItem="Ezs-Le-EHZ" firstAttribute="centerX" secondItem="81E-i6-Noh" secondAttribute="centerX" id="Iku-wQ-Mmk"/>
+                            <constraint firstItem="1n4-VA-CKt" firstAttribute="centerX" secondItem="81E-i6-Noh" secondAttribute="centerX" id="KFA-8Z-QJL"/>
+                            <constraint firstItem="176-AQ-agH" firstAttribute="leading" secondItem="81E-i6-Noh" secondAttribute="leading" constant="5" id="Kad-FE-KZJ"/>
+                            <constraint firstItem="Ezs-Le-EHZ" firstAttribute="centerY" secondItem="81E-i6-Noh" secondAttribute="centerY" id="bcU-4C-MYx"/>
+                            <constraint firstItem="176-AQ-agH" firstAttribute="top" secondItem="81E-i6-Noh" secondAttribute="top" constant="10" id="itc-u7-jqy"/>
+                            <constraint firstAttribute="trailing" secondItem="Ezs-Le-EHZ" secondAttribute="trailing" id="rhU-aK-DLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ezs-Le-EHZ" id="V1W-Fl-gre"/>
+                        <outlet property="likeButton" destination="1n4-VA-CKt" id="KAs-GT-cF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abg-FC-jDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352" y="-205"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ABn-ah-UDr">
@@ -219,4 +296,8 @@
             <point key="canvasLocation" x="1117" y="447"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="50" height="50"/>
+        <image name="heart_liked" width="50" height="50"/>
+    </resources>
 </document>

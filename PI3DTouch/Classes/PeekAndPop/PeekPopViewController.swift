@@ -54,9 +54,8 @@ class PeekPopViewController: UIViewController
         }
     }
     
-    override func viewWillAppear(animated: Bool)
-    {
-        self.collectionView?.reloadData()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
 

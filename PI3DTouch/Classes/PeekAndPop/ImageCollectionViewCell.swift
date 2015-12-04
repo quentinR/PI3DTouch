@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 class ImageCollectionViewCell: UICollectionViewCell
 {
@@ -25,6 +26,8 @@ class ImageCollectionViewCell: UICollectionViewCell
         self.image = image
         
         self.imageView?.image = self.image?.image
-        self.heartButton?.selected = (self.image?.liked == true)
+        self.image?.liked.observeNew({ (liked: Bool) -> Void in
+            self.heartButton?.selected = liked
+        })
     }
 }

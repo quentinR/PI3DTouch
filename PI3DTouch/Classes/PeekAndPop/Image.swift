@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 class Image
 {
@@ -16,7 +17,7 @@ class Image
     lazy var image: UIImage? = {
         return UIImage(named: "\(self.id)")
     }()
-    var liked = false
+    var liked = Observable(false)
     
     //MARK: - Init
     

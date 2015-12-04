@@ -49,7 +49,9 @@ class ImageViewController: UIViewController
         self.image = image
         
         self.imageView?.image = self.image?.image
-        self.likeButton?.selected = image.liked
+        self.image?.liked.observe ({ (liked: Bool) -> Void in
+            self.likeButton?.selected = liked
+        })
     }
     
     //MARK: - IBAction
@@ -57,7 +59,7 @@ class ImageViewController: UIViewController
     @IBAction private func likeButtonTapped(sender: AnyObject)
     {
         guard let image = self.image else { return }
-        self.like(!image.liked)
+        self.like(!image.liked.value)
     }
     
     @IBAction private func backTapped(sender: AnyObject)
@@ -69,8 +71,7 @@ class ImageViewController: UIViewController
     
     override func previewActionItems() -> [UIPreviewActionItem]
     {
-        guard let image = self.image else { return []}
-        if (image.liked) {
+        if (self.image?.liked.value == true) {
             return [self.dislikeAction]
         }
         return [self.likeAction]
@@ -80,7 +81,6 @@ class ImageViewController: UIViewController
     
     private func like(like: Bool)
     {
-        self.image?.liked = like
-        self.likeButton?.selected = like
+        self.image?.liked.next(like)
     }
 }

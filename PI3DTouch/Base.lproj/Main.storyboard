@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="447"/>
+            <point key="canvasLocation" x="1865" y="447"/>
         </scene>
         <!--Peek Pop View Controller-->
         <scene sceneID="GMH-fr-vo1">
@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="3352" y="-205"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Quick Actions View Controller-->
         <scene sceneID="ABn-ah-UDr">
             <objects>
-                <viewController id="mm1-wJ-vpx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditQuickActionsViewController" id="mm1-wJ-vpx" customClass="EditQuickActionsViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="765-W2-zw7"/>
                         <viewControllerLayoutGuide type="bottom" id="QWs-zq-s09"/>

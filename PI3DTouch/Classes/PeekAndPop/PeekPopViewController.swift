@@ -47,15 +47,13 @@ class PeekPopViewController: UIViewController
         self.collectionView?.registerNib(UINib(nibName: Constants.cellReuseIdentifier, bundle: nil),
             forCellWithReuseIdentifier: Constants.cellReuseIdentifier)
         
-        if (traitCollection.forceTouchCapability == .Available) {
-            if let collectionView = self.collectionView {
-                registerForPreviewingWithDelegate(self, sourceView: collectionView)
+        // if #available(iOS 9, *) { // Uncoment if the target is under iOS 9
+            if (traitCollection.forceTouchCapability == .Available) {
+                if let collectionView = self.collectionView {
+                    registerForPreviewingWithDelegate(self, sourceView: collectionView)
+                }
             }
-        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        //}
     }
 }
 
@@ -65,15 +63,20 @@ extension PeekPopViewController: UIViewControllerPreviewingDelegate
 {
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController?
     {
+        // Indetify the cell touched with the location
         guard let indexPath = collectionView?.indexPathForItemAtPoint(location) else { return nil }
         guard let cell = collectionView?.cellForItemAtIndexPath(indexPath) else { return nil }
+        // Define the sourceRect of the previewingContext with the cell frame
         previewingContext.sourceRect = cell.frame
         
+        // Setup the previewing viewController
         self.imageViewController.setupWithImage(self.images[indexPath.item])
         
+        // Define the size of the previewwing viewController
         let preferedWidth = CGRectGetWidth(self.view.frame) - 50.0
         self.imageViewController.preferredContentSize = CGSize(width: preferedWidth, height: preferedWidth)
         
+        // Return the previewwing viewControll
         return self.imageViewController
     }
     

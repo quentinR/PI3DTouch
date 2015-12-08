@@ -17,7 +17,7 @@ class PressureSensitivityViewController: UIViewController
     @IBOutlet weak var roundView: UIView?
     @IBOutlet weak var touchMeLabel: UILabel?
     
-    //MARK: - ViewController LifeCyle
+    //MARK: - ViewController Lifecyle
     
     override func viewDidLoad()
     {

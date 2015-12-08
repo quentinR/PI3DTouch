@@ -38,5 +38,16 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeCompose</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Edit Quick Actions</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).EditQuickActionsViewController</string>
+		</dict>
+	</array>
 </dict>
 </plist>

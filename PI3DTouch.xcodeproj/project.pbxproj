@@ -12,6 +12,9 @@
 		6623168F1C0A44310093EE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6623168D1C0A44310093EE82 /* Main.storyboard */; };
 		662316911C0A44310093EE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662316901C0A44310093EE82 /* Assets.xcassets */; };
 		662316941C0A44310093EE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662316921C0A44310093EE82 /* LaunchScreen.storyboard */; };
+		6654FCAF1C1539F6003E69C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6654FCAE1C1539F6003E69C0 /* Default-568h@2x.png */; };
+		6654FCB41C155865003E69C0 /* QuickActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654FCB31C155865003E69C0 /* QuickActionsManager.swift */; };
+		6654FCB61C1558A2003E69C0 /* EditQuickActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */; };
 		6687FB441C0B38D600AED660 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6687FB431C0B38D600AED660 /* Image.swift */; };
 		6687FB461C0B825E00AED660 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6687FB451C0B825E00AED660 /* ImageViewController.swift */; };
 		66A2CD691C0A561400787E28 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A2CD661C0A561400787E28 /* ImageCollectionViewCell.swift */; };
@@ -27,6 +30,9 @@
 		662316901C0A44310093EE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662316931C0A44310093EE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662316951C0A44310093EE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6654FCAE1C1539F6003E69C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6654FCB31C155865003E69C0 /* QuickActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickActionsManager.swift; sourceTree = "<group>"; };
+		6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuickActionsViewController.swift; sourceTree = "<group>"; };
 		6687FB431C0B38D600AED660 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6687FB451C0B825E00AED660 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		66A2CD661C0A561400787E28 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 		6623167D1C0A44310093EE82 = {
 			isa = PBXGroup;
 			children = (
+				6654FCAE1C1539F6003E69C0 /* Default-568h@2x.png */,
 				662316881C0A44310093EE82 /* PI3DTouch */,
 				662316871C0A44310093EE82 /* Products */,
 				8C8636F44C87DEDDCC610693 /* Pods */,
@@ -89,6 +96,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6654FCB21C155865003E69C0 /* QuickActions */ = {
+			isa = PBXGroup;
+			children = (
+				6654FCB31C155865003E69C0 /* QuickActionsManager.swift */,
+				6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */,
+			);
+			name = QuickActions;
+			path = Classes/QuickActions;
+			sourceTree = "<group>";
+		};
 		66A2CD651C0A561400787E28 /* PeekAndPop */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				66A2CD651C0A561400787E28 /* PeekAndPop */,
+				6654FCB21C155865003E69C0 /* QuickActions */,
 				66A2CD6E1C0A579D00787E28 /* PressureSensitivity */,
 			);
 			name = Features;
@@ -172,6 +190,7 @@
 				TargetAttributes = {
 					662316851C0A44310093EE82 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 5ZZ7W4SB26;
 					};
 				};
 			};
@@ -201,6 +220,7 @@
 				662316941C0A44310093EE82 /* LaunchScreen.storyboard in Resources */,
 				662316911C0A44310093EE82 /* Assets.xcassets in Resources */,
 				66A2CD6A1C0A561400787E28 /* ImageCollectionViewCell.xib in Resources */,
+				6654FCAF1C1539F6003E69C0 /* Default-568h@2x.png in Resources */,
 				6623168F1C0A44310093EE82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,10 +282,12 @@
 			files = (
 				66A2CD691C0A561400787E28 /* ImageCollectionViewCell.swift in Sources */,
 				66A2CD701C0A579D00787E28 /* PressureSensitivityViewController.swift in Sources */,
+				6654FCB61C1558A2003E69C0 /* EditQuickActionsViewController.swift in Sources */,
 				6623168A1C0A44310093EE82 /* AppDelegate.swift in Sources */,
 				66A2CD6B1C0A561400787E28 /* PeekPopViewController.swift in Sources */,
 				6687FB461C0B825E00AED660 /* ImageViewController.swift in Sources */,
 				6687FB441C0B38D600AED660 /* Image.swift in Sources */,
+				6654FCB41C155865003E69C0 /* QuickActionsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +401,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PI3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.PI3DTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a6607762-270b-4791-a730-def536667f9d";
 			};
 			name = Debug;
 		};
@@ -392,9 +416,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PI3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.PI3DTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a6607762-270b-4791-a730-def536667f9d";
 			};
 			name = Release;
 		};

@@ -11,8 +11,8 @@ import UIKit
 // MARK: - PeekPopViewControllerConstants
 
 struct Constants {
-    private static let nbCellPerRow        = 3
-    private static let margin: CGFloat     = 2.0
+    private static let nbCellPerRow: CGFloat = 3
+    private static let margin: CGFloat = 2.0
 }
 
 //MARK: - <UICollectionViewDataSource>
@@ -57,8 +57,8 @@ extension PeekPopViewController: UICollectionViewDelegateFlowLayout
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             let cellWidth = (CGRectGetWidth(collectionView.frame)
-                - (/*Constants.nbCellPerRow + 1*/ 4.0) * Constants.margin)
-                / /*Constants.nbCellPerRow*/ 3.0
+                - (Constants.nbCellPerRow + 1) * Constants.margin)
+                / Constants.nbCellPerRow
             return CGSizeMake(cellWidth, cellWidth)
     }
 }

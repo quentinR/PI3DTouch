@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dwk-38-Njd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dwk-38-Njd">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXJ-hI-lkF">
                                 <rect key="frame" x="0.0" y="178" width="600" height="179"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.19434745947462165" green="0.22506846336083999" blue="0.31366356382978722" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <state key="normal" title="Quick Actions">
@@ -30,21 +29,8 @@
                                     <segue destination="mm1-wJ-vpx" kind="show" id="See-Re-GzI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1f-W6-5YV">
-                                <rect key="frame" x="0.0" y="357.5" width="600" height="178.5"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.141183851" green="0.1635011462" blue="0.2278611203" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <state key="normal" title="Pressure Sensitivity">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="eEk-7c-SXl" kind="show" id="q60-0z-mbs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1go-dX-CX3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="178.5"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <state key="normal" title="Peek and Pop">
@@ -54,8 +40,18 @@
                                     <segue destination="ehe-Yy-FTQ" kind="show" id="gSh-ac-ueh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1f-W6-5YV">
+                                <rect key="frame" x="0.0" y="357" width="600" height="178.5"/>
+                                <color key="backgroundColor" red="0.141183851" green="0.1635011462" blue="0.2278611203" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Pressure Sensitivity">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eEk-7c-SXl" kind="show" id="q60-0z-mbs"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m1f-W6-5YV" secondAttribute="bottom" id="03M-o7-5vs"/>
@@ -81,7 +77,7 @@
         <!--Peek Pop View Controller-->
         <scene sceneID="GMH-fr-vo1">
             <objects>
-                <viewController id="ehe-Yy-FTQ" customClass="PeekPopViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeekPopViewController" id="ehe-Yy-FTQ" customClass="PeekPopViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cyI-fY-eDl"/>
                         <viewControllerLayoutGuide type="bottom" id="saY-5X-TKI"/>
@@ -92,7 +88,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="trI-vq-37X">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="QWV-gC-YgA">
                                     <size key="itemSize" width="100" height="100"/>
@@ -107,7 +102,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="trI-vq-37X" secondAttribute="trailing" id="CIQ-7p-Mlh"/>
@@ -138,7 +132,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="176-AQ-agH">
                                 <rect key="frame" x="5" y="10" width="50" height="50"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="D5A-br-No3"/>
                                     <constraint firstAttribute="height" constant="50" id="mKe-uf-HIg"/>
@@ -153,7 +146,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n4-VA-CKt">
                                 <rect key="frame" x="275" y="500" width="50" height="50"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3u6-T5-jii"/>
                                     <constraint firstAttribute="width" constant="50" id="L4a-ak-YBP"/>
@@ -172,13 +164,11 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ezs-Le-EHZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ezs-Le-EHZ" secondAttribute="height" multiplier="1:1" id="YIG-AW-frh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ezs-Le-EHZ" firstAttribute="leading" secondItem="81E-i6-Noh" secondAttribute="leading" id="CKQ-I3-MPJ"/>
@@ -211,9 +201,82 @@
                     <view key="view" contentMode="scaleToFill" id="nnG-EU-q18">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXD-xi-Bcf">
+                                <rect key="frame" x="0.0" y="108.5" width="600" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peek and Pop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agx-T5-l31">
+                                        <rect key="frame" x="40" y="12" width="124" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-ga-xuA">
+                                        <rect key="frame" x="511" y="9" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Xue-ga-xuA" firstAttribute="centerY" secondItem="EXD-xi-Bcf" secondAttribute="centerY" id="4d0-5D-HYA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xue-ga-xuA" secondAttribute="trailing" constant="40" id="MjQ-fR-Myc"/>
+                                    <constraint firstAttribute="height" constant="50" id="QYO-s4-CZl"/>
+                                    <constraint firstItem="agx-T5-l31" firstAttribute="leading" secondItem="EXD-xi-Bcf" secondAttribute="leading" constant="40" id="ahk-ed-zZc"/>
+                                    <constraint firstItem="agx-T5-l31" firstAttribute="centerY" secondItem="EXD-xi-Bcf" secondAttribute="centerY" id="ksF-WS-RWW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLC-uf-zfD">
+                                <rect key="frame" x="0.0" y="198.5" width="600" height="50"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FsX-22-msu">
+                                        <rect key="frame" x="511" y="9" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Sensitivity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7G-JH-eAM">
+                                        <rect key="frame" x="40" y="12" width="161.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="P7G-JH-eAM" firstAttribute="centerY" secondItem="zLC-uf-zfD" secondAttribute="centerY" id="64Y-u3-r0y"/>
+                                    <constraint firstItem="FsX-22-msu" firstAttribute="centerY" secondItem="zLC-uf-zfD" secondAttribute="centerY" id="Q0L-2N-fHb"/>
+                                    <constraint firstAttribute="trailing" secondItem="FsX-22-msu" secondAttribute="trailing" constant="40" id="SbQ-VL-5Q3"/>
+                                    <constraint firstAttribute="height" constant="50" id="Yid-yT-8BA"/>
+                                    <constraint firstItem="P7G-JH-eAM" firstAttribute="leading" secondItem="zLC-uf-zfD" secondAttribute="leading" constant="40" id="reN-UB-VEV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Quick Actions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-6I-h3n">
+                                <rect key="frame" x="251.5" y="50" width="97.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.19434745950000001" green="0.2250684634" blue="0.31366356379999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EXD-xi-Bcf" firstAttribute="top" secondItem="765-W2-zw7" secondAttribute="bottom" constant="100" id="ECq-HV-7lt"/>
+                            <constraint firstItem="zLC-uf-zfD" firstAttribute="top" secondItem="EXD-xi-Bcf" secondAttribute="bottom" constant="40" id="Unw-u3-kWf"/>
+                            <constraint firstItem="EXD-xi-Bcf" firstAttribute="top" secondItem="gBO-6I-h3n" secondAttribute="bottom" constant="40" id="Xjw-ej-XRk"/>
+                            <constraint firstItem="gBO-6I-h3n" firstAttribute="centerX" secondItem="nnG-EU-q18" secondAttribute="centerX" id="lPX-iP-FZm"/>
+                            <constraint firstItem="gBO-6I-h3n" firstAttribute="top" secondItem="765-W2-zw7" secondAttribute="bottom" constant="50" id="nlR-T9-Ss4"/>
+                            <constraint firstItem="EXD-xi-Bcf" firstAttribute="leading" secondItem="nnG-EU-q18" secondAttribute="leading" id="qqw-YC-zbW"/>
+                            <constraint firstItem="zLC-uf-zfD" firstAttribute="leading" secondItem="nnG-EU-q18" secondAttribute="leading" id="sYs-tA-ibI"/>
+                            <constraint firstAttribute="trailing" secondItem="EXD-xi-Bcf" secondAttribute="trailing" id="tIs-06-0KZ"/>
+                            <constraint firstAttribute="trailing" secondItem="zLC-uf-zfD" secondAttribute="trailing" id="xPk-2Q-tli"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ECq-HV-7lt"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="peekAndPopSwitch" destination="Xue-ga-xuA" id="XTt-pV-wEM"/>
+                        <outlet property="pressureSensitivitySwitch" destination="FsX-22-msu" id="f4A-dd-uUo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN4-25-y9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +285,7 @@
         <!--Pressure Sensitivity View Controller-->
         <scene sceneID="nd0-IA-cAR">
             <objects>
-                <viewController id="eEk-7c-SXl" customClass="PressureSensitivityViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PressureSensitivityViewController" id="eEk-7c-SXl" customClass="PressureSensitivityViewController" customModule="PI3DTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="whF-kI-vk0"/>
                         <viewControllerLayoutGuide type="bottom" id="Bno-fb-APL"/>
@@ -233,7 +296,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-O4-yd5">
                                 <rect key="frame" x="250" y="269" width="100" height="100"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.38986110349999997" green="0.4535552149" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="kaT-47-Lg3"/>
@@ -242,20 +304,17 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-kV-6qP">
                                 <rect key="frame" x="270" y="306" width="59.5" height="24.5"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="0.38986110351057607" green="0.45355521492854861" blue="0.63569481380000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G47-aZ-2xv">
                                 <rect key="frame" x="257" y="75" width="86.5" height="52"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="G47-aZ-2xv" firstAttribute="top" secondItem="whF-kI-vk0" secondAttribute="bottom" constant="75" id="6pB-i8-Qhb"/>
@@ -284,7 +343,6 @@
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" translucent="NO" id="3ok-fG-2cW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

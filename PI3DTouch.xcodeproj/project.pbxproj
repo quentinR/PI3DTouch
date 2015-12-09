@@ -12,9 +12,9 @@
 		6623168F1C0A44310093EE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6623168D1C0A44310093EE82 /* Main.storyboard */; };
 		662316911C0A44310093EE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662316901C0A44310093EE82 /* Assets.xcassets */; };
 		662316941C0A44310093EE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662316921C0A44310093EE82 /* LaunchScreen.storyboard */; };
+		6640BFCA1C18B0F2001C62C3 /* EditQuickActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BFC71C18B0F2001C62C3 /* EditQuickActionsViewController.swift */; };
+		6640BFCB1C18B0F2001C62C3 /* QuickActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BFC91C18B0F2001C62C3 /* QuickActionsManager.swift */; };
 		6654FCAF1C1539F6003E69C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6654FCAE1C1539F6003E69C0 /* Default-568h@2x.png */; };
-		6654FCB41C155865003E69C0 /* QuickActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654FCB31C155865003E69C0 /* QuickActionsManager.swift */; };
-		6654FCB61C1558A2003E69C0 /* EditQuickActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */; };
 		665DB9E01C1777C700B553CF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DB9D91C1777C700B553CF /* ImageViewController.swift */; };
 		665DB9E11C1777C700B553CF /* PeekPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DB9DA1C1777C700B553CF /* PeekPopViewController.swift */; };
 		665DB9E21C1777C700B553CF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DB9DC1C1777C700B553CF /* Image.swift */; };
@@ -31,9 +31,9 @@
 		662316901C0A44310093EE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662316931C0A44310093EE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662316951C0A44310093EE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6640BFC71C18B0F2001C62C3 /* EditQuickActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuickActionsViewController.swift; sourceTree = "<group>"; };
+		6640BFC91C18B0F2001C62C3 /* QuickActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickActionsManager.swift; sourceTree = "<group>"; };
 		6654FCAE1C1539F6003E69C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6654FCB31C155865003E69C0 /* QuickActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickActionsManager.swift; sourceTree = "<group>"; };
-		6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuickActionsViewController.swift; sourceTree = "<group>"; };
 		665DB9D91C1777C700B553CF /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		665DB9DA1C1777C700B553CF /* PeekPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPopViewController.swift; sourceTree = "<group>"; };
 		665DB9DC1C1777C700B553CF /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -98,11 +98,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6640BFC61C18B0F2001C62C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6640BFC71C18B0F2001C62C3 /* EditQuickActionsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6640BFC81C18B0F2001C62C3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6640BFC91C18B0F2001C62C3 /* QuickActionsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		6654FCB21C155865003E69C0 /* QuickActions */ = {
 			isa = PBXGroup;
 			children = (
-				6654FCB31C155865003E69C0 /* QuickActionsManager.swift */,
-				6654FCB51C1558A2003E69C0 /* EditQuickActionsViewController.swift */,
+				6640BFC61C18B0F2001C62C3 /* Controllers */,
+				6640BFC81C18B0F2001C62C3 /* Managers */,
 			);
 			name = QuickActions;
 			path = Classes/QuickActions;
@@ -307,13 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6640BFCB1C18B0F2001C62C3 /* QuickActionsManager.swift in Sources */,
 				665DB9E21C1777C700B553CF /* Image.swift in Sources */,
 				66A2CD701C0A579D00787E28 /* PressureSensitivityViewController.swift in Sources */,
+				6640BFCA1C18B0F2001C62C3 /* EditQuickActionsViewController.swift in Sources */,
 				665DB9E31C1777C700B553CF /* ImageCollectionViewCell.swift in Sources */,
-				6654FCB61C1558A2003E69C0 /* EditQuickActionsViewController.swift in Sources */,
 				665DB9E01C1777C700B553CF /* ImageViewController.swift in Sources */,
 				6623168A1C0A44310093EE82 /* AppDelegate.swift in Sources */,
-				6654FCB41C155865003E69C0 /* QuickActionsManager.swift in Sources */,
 				665DB9E61C1779BC00B553CF /* PeekPopViewController+Extensions.swift in Sources */,
 				665DB9E11C1777C700B553CF /* PeekPopViewController.swift in Sources */,
 			);
